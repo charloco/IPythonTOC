@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: IPythonTOC
+Version: 0.6.1
+Summary: Class for generating markdown entries used for notebook TOC
+Home-page: http://bit.ly/1zge9gE
+Author: Bren Letson
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: option arguments parsing optparse argparse getopt
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 2.5
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7

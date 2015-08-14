@@ -1,0 +1,10 @@
+IPythonTOC.py
+MANIFEST.in
+README.rst
+setup.py
+IPythonTOC.egg-info/PKG-INFO
+IPythonTOC.egg-info/SOURCES.txt
+IPythonTOC.egg-info/dependency_links.txt
+IPythonTOC.egg-info/top_level.txt
+doc/README.html
+doc/README.rst
