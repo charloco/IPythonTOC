@@ -28,6 +28,7 @@ Here's how I use it\:
 
     +--------------------------------------------------------------------------------------+
     | <a id='TOC'></a>                                                                     |
+    |                                                                                      |
     | #TOC                                                                                 |
     |                                                                                      |
     +--------------------------------------------------------------------------------------+
@@ -52,9 +53,10 @@ Here's how I use it\:
     |                                                                                     |
     | with open('TOCMarkdownCell.txt', 'w') as outfile\:                                  |
     |                                                                                     |
-    |     outfile.write(toc.genTOCMarkdownCell('Introduction'))                     |
+    |     outfile.write(toc.genTOCMarkdownCell('Introduction'))                           |
     |                                                                                     |
     | !cat TOCEntry.txt                                                                   |
+    |                                                                                     |
     | !rm TOCEntry.txt                                                                    |
     |                                                                                     |
     +-------------------------------------------------------------------------------------+
