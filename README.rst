@@ -2,7 +2,7 @@ IPythonTOC: Python class for IPython Notebook Table of Contents
 ===============================================================
 IPythonTOC is a class with methods to generate markdown text that can be used to create an IPython notebook table of contents with links to referenced cells.
 
-This work was inspired by the **Creating a table of contents with internal links in IPython Notebooks and Markdown documents** `notebook`_.
+This work was inspired by the **Creating a table of contents with internal links in IPython Notebooks and Markdown documents** `notebook`_. here: http://bit.ly/1TAKDfR
 
 Here's how I use it\:
 
@@ -20,39 +20,53 @@ Here's how I use it\:
     | \# if you called toc.genTOCMarkdownCell before running this cell, the title has been |
     | set in the class                                                                     |
     |                                                                                      |
-    | with open('TOCEntry.txt', 'w') as outfile\:                                          |
+    | print toc.genTOCEntry()                                                              |
     |                                                                                      |
-    |     outfile.write(toc.genTOCEntry())                                                 |
-    |                                                                                      |
-    | \%load TOCEntry.txt                                                                  |
     +--------------------------------------------------------------------------------------+
 
 #. Below the ``genTOCEntry cell```, make a ``TOC cell`` as a markdown cell\:
 
     +--------------------------------------------------------------------------------------+
-    | #Table of Contents                                                                   |
+    | <a id='TOC'></a>                                                                     |
+    | #TOC                                                                                 |
+    |                                                                                      |
     +--------------------------------------------------------------------------------------+
 
 #. As the notebook is developed, put this ``genTOCMarkdownCell`` just before a new section\:
 
     +-------------------------------------------------------------------------------------+
-    | \# a. move this cell to preceed the markdown cell you want to index                 |
     |                                                                                     |
-    | \# b. put the title string as argument to genTOCMarkdownCell & run the cell         |
+    | \# genTOCMarkdownCell                                                               |
     |                                                                                     |
-    | \# c. change the loaded cell from a code cell to a markdown cell                    |
+    | \# a. move this cell to preceed the section of your notebook to add to the index    |
     |                                                                                     |
-    | \# d. go to the head of this notebook and run the ``genTOCEntry cell`` and          |
-    | copy that output and paste into the TOC cell                                        |
+    | \# b  add a markdown cell as the first cell in your newly indexed section           |
+    |                                                                                     |
+    | \# b. put the title string as argument to genTOCMarkdownCell() & run the cell       |
+    |                                                                                     |
+    | \# c. copy the output into the markdown cell that is the first cell of your section |
+    |                                                                                     |
+    | \# d. run the ``genTOCEntry cell``near the top of this notebook                     |
+    |                                                                                     |
+    | \# e  copy that output and paste into the TOC markup cell                           |
     |                                                                                     |
     | with open('TOCMarkdownCell.txt', 'w') as outfile\:                                  |
     |                                                                                     |
-    |     outfile.write(toc.genTOCMarkdownCell('Merge Entered Values into Dataframe'))    |
+    |     outfile.write(toc.genTOCMarkdownCell('Introduction'))                     |
     |                                                                                     |
-    | \%load TOCMarkdownCell.txt                                                          |
+    | !cat TOCEntry.txt                                                                   |
+    | !rm TOCEntry.txt                                                                    |
+    |                                                                                     |
     +-------------------------------------------------------------------------------------+
 
-#. Move the ``genTOCMarkdownCell`` down before starting a new section and follow the instructions. The output can be pasted into the ``TOC cell``. For example, if you change the argument to  ``genTOCMarkdownCell`` and run the  ``genTOCMarkdownCell`` cell, the output is ``[Introduction](#Introduction)`` and you can copy this link string and paste it into the ``TOC cell`` as follows\:
+#. Move the ``genTOCMarkdownCell`` down to the point in your notebook where you want to start a new section. Add a markdown cell right after it, and follow the instructions. The output can be pasted into the markdown cell you just created. Then go to the ''genTOCEntry cell'' and run it. For example, if you make the argument to  ``genTOCMarkdownCell`` as shown above and run it, you get the output:
+    ''<a id='TOC'></a>
+    ###TOC''
+
+Then when you go to the top of your notebook and run genTocEntry, you get the output:
+    ``[Introduction](#Introduction)``  
+
+Copy this link string and paste it into the ``TOC markdown cell`` as follows\:
 
     +--------------------------------------------------------------------------------------+
     | #Table of Contents                                                                   |
@@ -61,7 +75,7 @@ Here's how I use it\:
     |                                                                                      |
     +--------------------------------------------------------------------------------------+
 
-After you edit the ``TOC cell`` to insert the link string and then you press ctrl-enter, the link to your new section will appear in your notebook as a web link and clicking it will position the browser to your new section.
+After you edit the ``TOC cell`` to insert the link string and then you press ctrl-enter, the link to your new section will appear in your notebook Table of Contents as a web link and clicking it will position the browser to your new section.
 
 License
 -------
