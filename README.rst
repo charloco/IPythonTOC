@@ -63,6 +63,7 @@ Here's how I use it\:
 
 #. Move the ``genTOCMarkdownCell`` down to the point in your notebook where you want to start a new section. Add a markdown cell right after it, and follow the instructions. The output can be pasted into the markdown cell you just created. Then go to the ''genTOCEntry cell'' and run it. For example, if you make the argument to  ``genTOCMarkdownCell`` as shown above and run it, you get the output:
     ''<a id='TOC'></a>
+    
     ###TOC''
 
 Then when you go to the top of your notebook and run genTocEntry, you get the output:
