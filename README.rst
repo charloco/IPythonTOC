@@ -2,7 +2,7 @@ IPythonTOC: Python class for IPython Notebook Table of Contents
 ===============================================================
 IPythonTOC is a class with methods to generate markdown text that can be used to create an IPython notebook table of contents with links to referenced cells.
 
-This work was inspired by the **Creating a table of contents with internal links in IPython Notebooks and Markdown documents** `notebook`_. here: http://bit.ly/1TAKDfR
+This work was inspired by the **Creating a table of contents with internal links in IPython Notebooks and Markdown documents** `notebook`_. 
 
 Here's how I use it\:
 
