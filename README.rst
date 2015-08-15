@@ -38,6 +38,7 @@ Below the ``genTOCEntry cell```, make a ``TOC cell`` as a markdown cell\:
 As the notebook is developed, put this ``genTOCMarkdownCell`` just before a new section\:
 
     +-------------------------------------------------------------------------------------+
+    |                                                                                     |
     | '''                                                                                 |
     | # genTOCMarkdownCell                                                                |
     |                                                                                     |
@@ -69,9 +70,9 @@ As the notebook is developed, put this ``genTOCMarkdownCell`` just before a new 
 
 Move the ``genTOCMarkdownCell`` down to the point in your notebook where you want to start a new section. Add a markdown cell right after it, and follow the instructions. The output can be pasted into the markdown cell you just created. Then go to the ''genTOCEntry cell'' and run it. For example, if you make the argument to  ``genTOCMarkdownCell`` as shown above and run it, you get the output:
 
-    ''<a id='Introduction'></a>
+    <a id='Introduction'></a>
     
-    ###Introduction''
+    ###Introduction
 
 Then when you go to the top of your notebook and run genTocEntry, you get the output:
 
@@ -86,7 +87,7 @@ Copy this link string and paste it into the ``TOC markdown cell`` as follows\:
     |                                                                                      |
     +--------------------------------------------------------------------------------------+
 
-After you edit the ``TOC cell`` to insert the link string and then you press ctrl-enter, the link to your new section will appear in your notebook Table of Contents as a web link and clicking it will position the browser to your new section.
+After you edit the ``TOC cell`` to insert the link string and then you press ahift-enter, the link to your new section will appear in your notebook Table of Contents as a web link and clicking it will position the browser to your new section.
 
 #License
 -------
