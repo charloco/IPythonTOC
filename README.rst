@@ -37,22 +37,22 @@ Here's how I use it\:
 
     +-------------------------------------------------------------------------------------+
     |                                                                                     |
-    | \# genTOCMarkdownCell                                                               |
+    | '# genTOCMarkdownCell'                                                              |
     |                                                                                     |
-    | \# Move this cell to preceed the section of your notebook to add to the index       |
+    | '# Move this cell to preceed the section of your notebook to add to the index'      |
     |                                                                                     |
-    | \# Add a markdown cell as the first cell in your newly indexed section              |
+    | '# Add a markdown cell as the first cell in your newly indexed section'             |
     |                                                                                     |
-    | \# Put the title of your new section as the string argument to genTOCMarkdownCell() |
-    | \# & run the cell                                                                   |
+    | '# Put the title of your new section as the string argument to genTOCMarkdownCell()'|
+    | '# & run the cell'                                                                  |
     |                                                                                     |
-    | \# Xopy the output into the markdown cell that is the first cell of your section    |
+    | '# Xopy the output into the markdown cell that is the first cell of your section'   |
     |                                                                                     |
-    | \# Rrun the ``genTOCEntry cell``near the top of this notebook                       |
+    | '# Rrun the ``genTOCEntry cell``near the top of this notebook'                      |
     |                                                                                     |
-    | \# Copy that output and paste into the TOC markup cell                              |
+    | '# Copy that output and paste into the TOC markup cell'                             |
     |                                                                                     |
-    | \# Here is the python code:                                                        |
+    | '# Here is the python code:'                                                        |
     |                                                                                     |
     | with open('TOCMarkdownCell.txt', 'w') as outfile\:                                  |
     |                                                                                     |
