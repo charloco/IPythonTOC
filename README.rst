@@ -14,7 +14,7 @@ Here's how I use it\:
     | toc = IPythonTOC()                                                                   |
     +--------------------------------------------------------------------------------------+
 
-#. Somewhere after the ``import cell``, put in the ``genTOCEntry cell`` but don't run it yet\:
+#. Somewhere after the ``import cell``, put in the ``genTOCEntry cell`` but *don't run it yet*\:
 
     +--------------------------------------------------------------------------------------+
     | \# if you called toc.genTOCMarkdownCell before running this cell, the title has been |
@@ -39,17 +39,20 @@ Here's how I use it\:
     |                                                                                     |
     | \# genTOCMarkdownCell                                                               |
     |                                                                                     |
-    | \# a. move this cell to preceed the section of your notebook to add to the index    |
+    | \# Move this cell to preceed the section of your notebook to add to the index       |
     |                                                                                     |
-    | \# b  add a markdown cell as the first cell in your newly indexed section           |
+    | \# Add a markdown cell as the first cell in your newly indexed section              |
     |                                                                                     |
-    | \# b. put the title string as argument to genTOCMarkdownCell() & run the cell       |
+    | \# Put the title of your new section as the string argument to genTOCMarkdownCell() |
+    | \# & run the cell                                                                   |
     |                                                                                     |
-    | \# c. copy the output into the markdown cell that is the first cell of your section |
+    | \# Xopy the output into the markdown cell that is the first cell of your section    |
     |                                                                                     |
-    | \# d. run the ``genTOCEntry cell``near the top of this notebook                     |
+    | \# Rrun the ``genTOCEntry cell``near the top of this notebook                       |
     |                                                                                     |
-    | \# e  copy that output and paste into the TOC markup cell                           |
+    | \# Copy that output and paste into the TOC markup cell                              |
+    |                                                                                     |
+    | \# Here is the python code:                                                        |
     |                                                                                     |
     | with open('TOCMarkdownCell.txt', 'w') as outfile\:                                  |
     |                                                                                     |
@@ -62,9 +65,9 @@ Here's how I use it\:
     +-------------------------------------------------------------------------------------+
 
 #. Move the ``genTOCMarkdownCell`` down to the point in your notebook where you want to start a new section. Add a markdown cell right after it, and follow the instructions. The output can be pasted into the markdown cell you just created. Then go to the ''genTOCEntry cell'' and run it. For example, if you make the argument to  ``genTOCMarkdownCell`` as shown above and run it, you get the output:
-    ''<a id='TOC'></a>
+    ''<a id='Introduction'></a>
     
-    ###TOC''
+    ###Introduction''
 
 Then when you go to the top of your notebook and run genTocEntry, you get the output:
     ``[Introduction](#Introduction)``  
